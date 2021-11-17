@@ -35,3 +35,7 @@ body{
 .content{
     margin-top: 100px;
 }
+
+.navbar .scrolled{
+    background: rgb(222,192,222);
+}
