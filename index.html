@@ -125,16 +125,21 @@
 
 
         
-<!-- add js here as bootstrap v5 doesnt come with jquery
+<!-- added js here as bootstrap v5 doesnt come with jquery --> 
     <script>
-        $(function(){
-            $(document).scroll(function(){
-                var $nav = $("#mainNavbar");
-                $nav.toggleClass("scrolled", $(this).scrollTop > $nav.height());
-            })
+        
+        window.addEventListener('scroll',()=>{
+            const nav =document.querySelector('#mainNavbar');
+            
+            if(this.pageYOffset > nav.offsetHeight){
+                nav.classList.add('scrolled')
             }
-        )
-    </script> -->
+            else{
+                nav.classList.remove('scrolled')
+            }
+        } );
+        
+    </script>
 </body>
 
 </html>
